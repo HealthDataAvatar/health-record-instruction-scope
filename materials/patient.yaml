@@ -1,0 +1,12 @@
+# The one synthetic patient (D12). Draft by Claude for Hex to edit.
+# Synthetic-data rules (docs/materials.md, D26): no NHS number; set in Golspie, Sutherland, with
+# invented 01408 647xxx phone numbers, invented streets and organisations, and KW10 postcodes.
+
+title: Mrs
+first_name: Margaret
+last_name: Hughes
+date_of_birth: 1959-05-03   # 67 on Tue 17 Nov 2026
+address: 14 Alder Close, Golspie KW10 6SH
+hospital_numbers:
+  westbrook: WGH0458213
+gp: alder-lane   # sender id in senders.yaml

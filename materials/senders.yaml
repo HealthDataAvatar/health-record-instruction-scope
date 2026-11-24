@@ -1,0 +1,162 @@
+# Letter senders, shared by every instruction so letters are consistent with each other and the
+# background files. Each instruction names a sender by id. Draft by Claude for Hex to edit.
+#
+# A letter is assembled as: letterhead (organisation, department, address, phone), date, patient
+# block (name, address, date of birth, hospital number if any), "Re: <subject>" if
+# the letter has one, "Dear <title> <last_name>,", the instruction's body, "Yours sincerely,",
+# the signer's name and role, "on behalf of <on_behalf_of>" if the sender has one, and "cc:" the
+# patient's GP (omitted when the sender is the GP, or has `cc_gp: false`).
+#
+# Phone numbers are invented in the 01408 647xxx block (Golspie), checked against public listings (D26).
+
+westbrook-preop:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Pre-operative Assessment Clinic
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 412
+  signer:
+    name: Sarah Okonjo
+    role: Pre-operative Assessment Nurse
+
+westbrook-day-surgery:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Day Surgery Unit
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 430
+  signer:
+    name: Mr James Whitfield
+    role: Consultant General Surgeon
+
+westbrook-day-surgery-manager:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Day Surgery Unit
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 430
+  signer:
+    name: Joanne Barker
+    role: Day Surgery Unit Manager
+
+westbrook-admissions:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Admissions Office
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 455
+  signer:
+    name: Karen Mills
+    role: Admissions Coordinator
+  on_behalf_of: Mr J Whitfield   # optional: the consultant the office writes for
+
+westbrook-cardiology:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Cardiology Outpatients
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 421
+  signer:
+    name: Dr Anil Mehta
+    role: Consultant Cardiologist
+
+westbrook-neurology:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Headache Clinic, Department of Neurology
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 463
+  signer:
+    name: Dr Eleanor Marsh
+    role: Consultant Neurologist
+
+westbrook-anticoagulation:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Anticoagulation Clinic
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 471
+  signer:
+    name: Priya Shah
+    role: Anticoagulation Specialist Pharmacist
+
+westbrook-utc:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Minor Injuries Unit
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 402
+  signer:
+    name: Mark Ellison
+    role: Advanced Nurse Practitioner
+
+westbrook-cardiac-physiology:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Cardiac Physiology
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 426
+  signer:
+    name: Hannah Price
+    role: Senior Cardiac Physiologist
+
+westbrook-eye-clinic:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Eye Clinic, Ophthalmology Outpatients
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 480
+  signer:
+    name: Lisa Morgan
+    role: Appointments Coordinator
+  on_behalf_of: Mr R Sandhu, Consultant Ophthalmologist
+
+market-street-dental:
+  organisation: Market Street Dental Care
+  department: null
+  address: 8 Market Street, Golspie KW10 6TB
+  phone: 01408 647 755
+  cc_gp: false
+  signer:
+    name: Dr Siân Roberts
+    role: Dentist
+
+westbrook-falls:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Falls and Bone Health Clinic
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 448
+  signer:
+    name: Dr Amelia Grant
+    role: Consultant Geriatrician
+
+westbrook-ent:
+  organisation: Westbrook General Hospital
+  hospital: westbrook
+  department: Ear, Nose and Throat (ENT) Department
+  address: Westbrook Road, Golspie KW10 6UW
+  phone: 01408 647 459
+  signer:
+    name: Mr Daniel Osei
+    role: Consultant ENT Surgeon
+
+
+alder-lane-nurse:
+  organisation: Alder Lane Surgery
+  department: null
+  address: 2 Alder Lane, Golspie KW10 6RL
+  phone: 01408 647 780
+  cc_gp: false              # same practice as the GP
+  signer:
+    name: Claire Dawson
+    role: Practice Nurse
+
+alder-lane:
+  organisation: Alder Lane Surgery
+  department: null
+  address: 2 Alder Lane, Golspie KW10 6RL
+  phone: 01408 647 780
+  signer:
+    name: Dr Rina Patel
+    role: General Practitioner
